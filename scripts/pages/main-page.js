@@ -1,4 +1,4 @@
-import Card from '../components/cards.js';
+import renderProduct from '../components/product.js';
 import STORE from '../store.js';
 
 function render() {
@@ -6,7 +6,7 @@ function render() {
   return `
     <div class="main-container">
       <div class="cards-container">
-        ${products.map(Card.render).join('')}
+        ${products.map(renderProduct).join('')}
       </div>
     </div>
   `;

@@ -1,4 +1,4 @@
-function render({ id, name, url_image, price, discount, category }) {
+function renderProduct({ id, name, url_image, price, discount, category }) {
   let discounted_price = null;
   if (discount) {
     discounted_price = price * (1 - discount / 100);
@@ -27,8 +27,4 @@ function render({ id, name, url_image, price, discount, category }) {
   `;
 }
 
-const Card = {
-  render
-};
-
-export default Card;
+export default renderProduct;
