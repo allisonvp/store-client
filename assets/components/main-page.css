@@ -1,0 +1,11 @@
+.main-container {
+  max-width: 130rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  gap: 3rem;
+}
