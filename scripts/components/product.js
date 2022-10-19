@@ -1,10 +1,16 @@
 function renderProduct({ id, name, url_image, price, discount, category }) {
   let discounted_price = null;
   let discounted_price_str = null;
-  let price_str = price.toLocaleString('en-US');
+  let price_str = price.toLocaleString('es-CL', {
+    style: 'currency',
+    currency: 'CLP'
+  });
   if (discount) {
     discounted_price = price * (1 - discount / 100);
-    discounted_price_str = discounted_price.toLocaleString('en-US');
+    discounted_price_str = discounted_price.toLocaleString('es-CL', {
+      style: 'currency',
+      currency: 'CLP'
+    });
   }
   return `
   <div class="card-container">
@@ -19,8 +25,8 @@ function renderProduct({ id, name, url_image, price, discount, category }) {
         <div>
           <div class="card-price-container">${
             discount
-              ? `<p class="card-discounted-price">$${discounted_price_str}</p> <p class="card-crossed-out-price">$${price_str}</p>`
-              : `<p class="card-price">$${price_str}</p>`
+              ? `<p class="card-discounted-price">${discounted_price_str}</p> <p class="card-crossed-out-price">${price_str}</p>`
+              : `<p class="card-price">${price_str}</p>`
           }</div>
           <p class="card-name">${name}</p>
         </div>
