@@ -21,16 +21,11 @@
   --error-300: #e02447;
   --error-400: #c51c3b;
   --error-500: #a11730;
-  --light-green: #c8d367;
-  --red: #ed7b72;
-  --blue: #2c4665;
-  --yellow: #f9d846;
-  --purple: #d7b4ef;
-  --pink: #f199b3;
-  --green: #b3d8a5;
-  --gray: #bebebe;
-  --light-blue: #a3e4d7;
-  --orange: #e68415;
+  --light-blue-100: #d7f1ec;
+  --light-blue-200: #a3e4d7;
+  --light-blue-300: #3e9684;
+  --orange-100: #ff8d23;
+  --orange-200: #e68415;
 
   --shadow-xs: 0px 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);

@@ -16,6 +16,7 @@ export default async function apiFetch(
     headers: headers,
     body: body ? JSON.stringify(body) : null
   };
+  console.log(BASE_URI + endPoint + '?' + new URLSearchParams(params));
   const response = await fetch(
     BASE_URI + endPoint + '?' + new URLSearchParams(params),
     config

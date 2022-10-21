@@ -1,16 +1,63 @@
-.main-container {
+.custom-main-container {
   max-width: calc(121rem + 2 * 6rem);
-  padding: 4rem;
+  padding: 3rem 4rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.cards-container {
+.custom-main-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   gap: 3rem;
 }
 
-.cards-container > div {
+.custom-main-cards-container > div {
   width: 100%;
   justify-self: center;
+}
+
+.custom-main-form-select {
+  width: fit-content;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.custom-main-options {
+  display: flex;
+  justify-content: end;
+}
+
+.custom-main-no-products {
+  font-size: 3rem;
+  color: var(--gray-300);
+  text-align: center;
+}
+
+.custom-main-filter-options {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.custom-main-filter-option {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: var(--gray-100);
+  width: fit-content;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+
+.custom-main-filter-option button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.custom-main-filter-option svg {
+  width: 1.7rem;
 }

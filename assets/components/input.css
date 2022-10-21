@@ -1,0 +1,21 @@
+.input-text {
+  display: flex;
+  gap: 0.4rem;
+  border: 0.2rem solid #7dd4c3;
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.8rem;
+  padding: 0.2rem 0.55rem;
+  background-color: white;
+}
+.input-text input {
+  border: none;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.input-text input:focus {
+  outline: none;
+}
+.input-text svg {
+  width: 2rem;
+}
