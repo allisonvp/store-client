@@ -1,7 +1,7 @@
 
 # Bsale Store
 
-Web application using vanilla JavaScript and fetching data with the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
+Single-page application developed with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
 
 ## Features
 
@@ -11,20 +11,33 @@ Web application using vanilla JavaScript and fetching data with the [Bsale Store
 - Order products by ascending or descending
 
 
-
 ## Demo
 
+### Responsive Design
+
+Developed with a responsive design to work properly on different devices (cell phones, tablets, desktops and laptops).
+
+- Mobile mode
+
+  <img src="./assets/images/responsive-prod-order-category.png" width="350"><img src="./assets/images/responsive-prod-search.png" width="350">
+  
 - List of products
- ![products](./assets/images/all-products.png)
 
-- Filter products by category
- ![products-categories](./assets/images/products-categories.JPG)
+  <img src="./assets/images/all-products.png" width="950">
 
-- Ordering products and filter by category
- ![products-categories](./assets/images/products-filter-ordering-category.JPG)
+- Products filtered by category
 
-- Search products
- ![products-categories](./assets/images/products-filter-search.JPG)
+  <img src="./assets/images/products-categories.JPG" width="950">
+
+- Products ordered and filtered by category
+
+  <img src="./assets/images/products-filter-ordering-category.JPG" width="950">
+
+- Product search
+
+  <img src="./assets/images/products-filter-search.JPG" width="950">
+ 
+
 
 
 
