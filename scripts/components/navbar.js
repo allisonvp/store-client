@@ -40,7 +40,7 @@ function listenSearchByName() {
     if (event.key === 'Enter') {
       try {
         event.preventDefault();
-        const name = event.target.value;
+        const name = event.target.value.trim();
         STORE.deleteParam('category');
         STORE.deleteParam('ordering');
         await STORE.fetchProducts({ search: name });
