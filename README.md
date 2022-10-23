@@ -1,7 +1,14 @@
 
 # Bsale Store
 
-Single-page application developed with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
+An online store developed as a single-page application with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
+
+### Built With
+
+<p>
+    <img src="https://skillicons.dev/icons?i=javascript" /> <span>JavaScript</span></br>
+    <img src="https://skillicons.dev/icons?i=bootstrap" /> <span>Bootstrap</span>
+</p>
 
 ## Features
 
