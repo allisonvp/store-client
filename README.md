@@ -5,13 +5,10 @@ An online store developed as a single-page application with vanilla JavaScript t
 
 ## Built With
 
-|           |          |
-| :-------- | :------- |
-| <div display="flex"><img src="https://skillicons.dev/icons?i=html" /> | <span>HTML</span></div> |
-| <div display="flex"><img src="https://skillicons.dev/icons?i=css" /> | <span>CSS</span></div> |
-| <div ><img src="https://skillicons.dev/icons?i=javascript" /> | <span>JavaScript</span></div> |
-| <div display="flex"><img src="https://skillicons.dev/icons?i=bootstrap" /> | <span>Bootstrap</span></div> |
-|           |          |
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
 
 ## Features
 
