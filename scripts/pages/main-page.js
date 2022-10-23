@@ -31,7 +31,7 @@ function render() {
                       type = 'categoria';
                       break;
                     case 'ordering':
-                      name = param.name === 'name' ? 'A-Z' : 'Z-A';
+                      name = param.name === 'asc' ? 'A-Z' : 'Z-A';
                       type = 'orden';
                       break;
                     default:
@@ -64,13 +64,13 @@ function listenSelectOrder() {
   const selectOrder = document.querySelector('.js-order');
   selectOrder.addEventListener('change', async (event) => {
     const opt = selectOrder.value;
-    let opt_order;
+    // let opt_order;
     try {
-      opt_order = opt === 'asc' ? 'name' : '-name';
+      // opt_order = opt === 'asc' ? 'name' : '-name';
       if (STORE.params.some((param) => param.type === 'ordering')) {
         STORE.deleteParam('ordering');
       }
-      STORE.addParam('ordering', opt_order);
+      STORE.addParam('ordering', opt);
       await STORE.fetchProducts(STORE.getParams());
       DOMHandler.reload();
     } catch (error) {

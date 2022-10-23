@@ -41,11 +41,9 @@ function listenSearchByName() {
       try {
         event.preventDefault();
         const name = event.target.value;
-        if (STORE.params.some((param) => param.type === 'search')) {
-          STORE.deleteParam('search');
-        }
-        STORE.addParam('search', name);
-        await STORE.fetchProducts(STORE.getParams());
+        STORE.deleteParam('category');
+        STORE.deleteParam('ordering');
+        await STORE.fetchProducts({ search: name });
         DOMHandler.reload();
       } catch (error) {
         console.log(error);
