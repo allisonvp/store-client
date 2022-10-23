@@ -3,12 +3,15 @@
 
 An online store developed as a single-page application with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
 
-### Built With
+## Built With
 
-<p>
-    <img src="https://skillicons.dev/icons?i=javascript" /> <span>JavaScript</span></br>
-    <img src="https://skillicons.dev/icons?i=bootstrap" /> <span>Bootstrap</span>
-</p>
+|           |          |
+| :-------- | :------- |
+| <div display="flex"><img src="https://skillicons.dev/icons?i=html" /> | <span>HTML</span></div> |
+| <div display="flex"><img src="https://skillicons.dev/icons?i=css" /> | <span>CSS</span></div> |
+| <div ><img src="https://skillicons.dev/icons?i=javascript" /> | <span>JavaScript</span></div> |
+| <div display="flex"><img src="https://skillicons.dev/icons?i=bootstrap" /> | <span>Bootstrap</span></div> |
+|           |          |
 
 ## Features
 
@@ -44,7 +47,6 @@ Developed with a responsive design to work properly on different devices (cell p
 
   <img src="./assets/images/products-filter-search.JPG" width="950">
  
-
 
 
 
