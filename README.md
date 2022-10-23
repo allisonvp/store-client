@@ -14,9 +14,17 @@ Web application using vanilla JavaScript and fetching data with the [Bsale Store
 
 ## Demo
 
-Insert gif or link to demo
+- List of products
+ ![products](./assets/images/all-products.png)
 
-(https://github.com/allisonvp/bsale-test-client/tree/main/assets/images/all-products.JPG)
+- Filter products by category
+ ![products-categories](./assets/images/products-categories.JPG)
+
+- Ordering products and filter by category
+ ![products-categories](./assets/images/products-filter-ordering-category.JPG)
+
+- Search products
+ ![products-categories](./assets/images/products-filter-search.JPG)
 
 
 
