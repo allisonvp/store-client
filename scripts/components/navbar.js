@@ -6,7 +6,9 @@ function render() {
   return `
     <div class="navbar custom-navbar-container">
         <nav class="container-fluid custom-navbar-section">
-          <img class="custom-navbar-logo" src="../../assets/images/bsale-logo.png" alt="bsale-logo" />
+          <button class="custom-navbar-logo-btn js-logo-btn">
+            <img class="custom-navbar-logo" src="../../assets/images/bsale-logo.png" alt="bsale-logo" />
+          </button>
           <div class="custom-navbar-options">
             <div class="input-text">
               <input class="js-search" id="productName" name="productName" type="text" />
@@ -32,6 +34,20 @@ function render() {
         </nav>
     </div>
     `;
+}
+
+function listenLogoBtn() {
+  const logoBtn = document.querySelector('.js-logo-btn');
+  logoBtn.addEventListener('click', async (event) => {
+    try {
+      await STORE.fetchProducts({ search: name });
+      STORE.deleteParam('category');
+      STORE.deleteParam('ordering');
+      DOMHandler.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  });
 }
 
 function listenSearchByName() {
@@ -76,6 +92,7 @@ const Navbar = {
   addListeners() {
     listenSearchByName();
     listenFilterByCategory();
+    listenLogoBtn();
   }
 };
 
