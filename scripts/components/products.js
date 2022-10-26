@@ -1,5 +1,6 @@
 import STORE from '../store.js';
 
+//The map function iterates through the array of products and has the renderProduct function as a callback to render the product card for each product of the array of products.
 function render() {
   const products = STORE.products;
   return `
@@ -9,13 +10,16 @@ function render() {
   `;
 }
 
+//Render the product card.
 function renderProduct({ id, name, url_image, price, discount, category }) {
   let discounted_price = null;
   let discounted_price_str = null;
+  //toLocaleString returns a string with a language-sensitive representation of the price.
   let price_str = price.toLocaleString('es-CL', {
     style: 'currency',
     currency: 'CLP'
   });
+  //If there is a discount, calculate de discounted price and stores into the discounted_price variable with the local
   if (discount) {
     discounted_price = price * (1 - discount / 100);
     discounted_price_str = discounted_price.toLocaleString('es-CL', {
@@ -48,10 +52,10 @@ function renderProduct({ id, name, url_image, price, discount, category }) {
 }
 
 const Products = {
+  //returns the html. The innerHtml will read directly the html.
   toString() {
     return render();
-  },
-  addListeners() {}
+  }
 };
 
 export default Products;

@@ -1,6 +1,7 @@
 import DOMHandler from '../dom-handler.js';
 import STORE from '../store.js';
 
+//Render the navbar that include the search input and the sidebar that includes all categories.
 function render() {
   const categories = STORE.categories;
   return `
@@ -36,59 +37,77 @@ function render() {
     `;
 }
 
+//A function that listens when the user clicks on the logo.
 function listenLogoBtn() {
   const logoBtn = document.querySelector('.js-logo-btn');
   logoBtn.addEventListener('click', async (event) => {
     try {
-      await STORE.fetchProducts({ search: name });
-      STORE.deleteParam('category');
-      STORE.deleteParam('ordering');
+      //the params array stores an empty array to delete its elements (query params).
+      STORE.params = [];
+      //the STORE calls its fetchProducts method without query params as an argument to update its products array (all products).
+      await STORE.fetchProducts();
+      //The DOMHandler reloads the MainPage module to re-render it with the updated product list.
       DOMHandler.reload();
     } catch (error) {
+      //In case there was an error in the api request, the error will be displayed.
       console.log(error);
     }
   });
 }
 
+//A function that listens when the user searches for a product in the input and presses the Enter key.
 function listenSearchByName() {
   const searchByName = document.querySelector('.js-search');
   searchByName.addEventListener('keydown', async (event) => {
     if (event.key === 'Enter') {
       try {
-        event.preventDefault();
+        //trim() removes blanks at both ends of the string. Eg. '  mani   ' --> 'mani'
         const name = event.target.value.trim();
-        STORE.deleteParam('category');
-        STORE.deleteParam('ordering');
+        //the params array stores an empty array to delete its elements (query params).
+        STORE.params = [];
+        //the STORE calls its fetchProducts method with the search query param as an argument to update its products array.
         await STORE.fetchProducts({ search: name });
+        //The DOMHandler reloads the MainPage module to re-render it with the updated product list.
         DOMHandler.reload();
       } catch (error) {
+        //In case there was an error in the api request, the error will be displayed.
         console.log(error);
       }
     }
   });
 }
 
+//Listens when the user clicks on any category in the list of categories displayed in the html div element with the js-categories class
 function listenFilterByCategory() {
   const categoriesContainer = document.querySelector('.js-categories');
   categoriesContainer.addEventListener('click', async (event) => {
+    //stores the value of the data-ctg attribute of the clicked element (Eg: pisco).
     const categoryName = event.target.closest('[data-ctg]').dataset.ctg;
     try {
+      //validates whether the STORE's params array has already stored this type of query parameter (category)
       if (STORE.params.some((param) => param.type === 'category')) {
+        //If true, the STORE calls its deleteParam method to remove it from its params array.
         STORE.deleteParam('category');
       }
+      //the STORE calls its addParam method to add the category param.
       STORE.addParam('category', categoryName);
+      //the STORE calls its fetchProducts method with the params array as an argument to update its products array
       await STORE.fetchProducts(STORE.getParams());
+      //The DOMHandler reloads the MainPage module to re-render it with the updated product list.
       DOMHandler.reload();
     } catch (error) {
+      //In case there was an error in the api request, the error will be displayed.
       console.log(error);
     }
   });
 }
 
 const Navbar = {
+  //returns the html. The innerHtml will read directly the html.
   toString() {
     return render();
   },
+  //Add the navbar's listeners
   addListeners() {
     listenSearchByName();
     listenFilterByCategory();
