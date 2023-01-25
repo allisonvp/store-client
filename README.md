@@ -23,6 +23,26 @@ The Frontend is an online store (single-page application) developed with vanilla
 
 ## Run Locally
 
+Click on Code
+
+<img src="https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png" width=400/>
+
+Copy the repository URL.
+
+<img src="https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png" width=400/>
+
+Open Git Bash and change the current working directory to the location where you want to clone the project.
+
+```bash
+  git clone https://github.com/allisonvp/store-client.git
+```
+
+Go to the project directory
+
+```bash
+  cd store-client/
+```
+
 Start a local server as Live Server with the project folder. You can change the BASE_URI variable in the config.js file.
 
 ```javascript
