@@ -26,7 +26,7 @@ The Frontend is an online store (single-page application) developed with vanilla
 Start a local server as Live Server with the project folder. You can change the BASE_URI variable in the config.js file.
 
 ```javascript
-const BASE_URI = 'https://api-bsaletest.herokuapp.com/';
+const BASE_URI = 'https://api-store-seven.vercel.app/';
 ```
 or
 ```javascript
