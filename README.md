@@ -1,7 +1,11 @@
 
-# Bsale Store
+# Store Frontend
 
-An online store developed as a single-page application with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-bsaletest.herokuapp.com/api/products)
+This project consists of building an online store, where the user can initially see all the products, can search for them, sort them in ascending or descending order and can also filter the products by category. In addition, the user can see the products with the discount applied in case they have a discount.
+
+It is requested to build separately [backend](https://github.com/allisonvp/api-store) (REST API) and frontend (application that consumes it).
+
+The Frontend is an online store (single-page application) developed with vanilla JavaScript that obtains data from the [Store API](https://api-store-seven.vercel.app/api/products). 
 
 ## Built With
 
@@ -17,6 +21,17 @@ An online store developed as a single-page application with vanilla JavaScript t
 - Search products (case-insensitive)
 - Order products by ascending or descending
 
+## Run Locally
+
+Start a local server as Live Server with the project folder. You can change the BASE_URI variable in the config.js file.
+
+```javascript
+const BASE_URI = 'https://api-store-seven.vercel.app/';
+```
+or
+```javascript
+const BASE_URI = 'http://localhost:3000/';
+```
 
 ## Demo
 
