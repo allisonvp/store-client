@@ -5,7 +5,7 @@ This project consists of building an online store, where the user can initially 
 
 It is requested to build separately [backend](https://github.com/allisonvp/api-bsale-test) (REST API) and frontend (application that consumes it).
 
-The Frontend is an online store (single-page application) developed with vanilla JavaScript that obtains data from the [Bsale Store API](https://api-store-seven.vercel.app/api/products). 
+The Frontend is an online store (single-page application) developed with vanilla JavaScript that obtains data from the [Store API](https://api-store-seven.vercel.app/api/products). 
 
 ## Built With
 
