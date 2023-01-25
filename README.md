@@ -1,5 +1,5 @@
 
-# Bsale Store Frontend
+# Store Frontend
 
 This project consists of building an online store, where the user can initially see all the products, can search for them, sort them in ascending or descending order and can also filter the products by category. In addition, the user can see the products with the discount applied in case they have a discount.
 
